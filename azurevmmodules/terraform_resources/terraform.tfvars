@@ -1,6 +1,6 @@
-subscription_id = "09551a3e-fd9c-4de1-a790-4a68489dc449"
+subscription_id = "********************"
 ## Pre Defined KV for storing secret
-devKV_Name         = "terraformtesting1"       #### We have to change as per env
+devKV_Name         = "terraformtesting1"       
 
 ## VNET - SUBNET
 rg_Name            = "Terra-Test" ## We have to change as per env
