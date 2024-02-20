@@ -1,7 +1,7 @@
 ## Subscription ID, Resource Group and Location set. These are kept universal in this code. ####
 variable "subscription_id" {
   type    = string
-  default = "09551a3e-fd9c-4de1-a790-4a68489dc449"
+  default = "**********************"
 }
 variable "location" {
   type    = string
