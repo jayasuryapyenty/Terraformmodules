@@ -1,7 +1,7 @@
 # Backend storage account declaration to store the Terraform state file.
 terraform {
   backend "azurerm" {
-    subscription_id      = "09551a3e-fd9c-4de1-a790-4a68489dc449"
+    subscription_id      = "***********************"
     resource_group_name  = "Terraformtesting"
     storage_account_name = "terrafromtesting" # Storage account used for backend
     container_name       = "terraformtesting"
@@ -49,18 +49,7 @@ module "vnet01" {
   subnet_NameList    = var.subnet_NameList
   subnet_AddressList = var.subnet_AddressList
 }
-
-# Azure Windows Virtual Machine deployment
-#data "azurerm_key_vault_secret" "virtual_machine_user" {
-#  name         = var.virtual_machine_Usr
-#  key_vault_id = data.azurerm_key_vault.kv_name.id
-#}
-
-#data "azurerm_key_vault_secret" "virtual_machine_passwd" {
-#  name         = var.virtual_machine_Password
-#  key_vault_id = data.azurerm_key_vault.kv_name.id
-#}
-
+# windows Deployment Code
 module "windows_vm" {
   depends_on           = [module.vnet01.subnet]
   source               = "../terraform_modules/virtual_machine"
